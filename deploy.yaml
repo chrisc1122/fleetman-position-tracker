@@ -6,8 +6,8 @@
      region: us-east-1
      instance_type: t2.nano
      base_image_name: ami-0080e4c5bc078760e
-     number_of_instances_to_create: 1
      vpc_id: vpc-f7ecbf8c
+     number_of_instances_to_create: 1
 
   tasks:
 
@@ -76,7 +76,7 @@
 
     - name: All working so destroy the temporary instance
       ec2:
-        key_name: microservice-course-keypair
+        key_name: AWS-MicroServices2
         group: jenkins_server_security_groups
         instance_type: notneeded
         image: notneeded
