@@ -12,10 +12,6 @@
 
   tasks:
 
-    - name: Setup variables for later use
-      set_fact:
-         region: "{{ region }}"
-
     - name: Create a suitable set of firewall rules
       ec2_group:
          vpc_id: "{{ vpc_id }}"
