@@ -69,6 +69,14 @@
 - hosts: localhost
 
   tasks:
+  
+  vars:
+     region: us-east-1
+     instance_type: t2.nano
+     base_image_name: ami-0080e4c5bc078760e
+     vpc_id: vpc-f7ecbf8c
+     number_of_instances_to_create: 1
+     security_group_name: jenkins_server_security_group
 
     - name: All working so destroy the temporary instance
       ec2:
@@ -83,4 +91,3 @@
           Name: Dummy_Test
         count_tag:
           Name: Dummy_Test
-          
